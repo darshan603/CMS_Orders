@@ -1,11 +1,6 @@
 ﻿using FluentAssertions;
 using OrdersApi.Application.Common.Dtos;
 using OrdersApi.Application.Orders.CreateOrder;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OrdersApi.Tests.ApplicationTests
 {

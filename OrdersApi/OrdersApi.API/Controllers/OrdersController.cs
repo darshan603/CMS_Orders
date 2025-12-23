@@ -41,7 +41,7 @@ namespace OrdersApi.API.Controllers
                     {
                         var existing = await _mediator.Send(new GetOrderByIdQuery { Id = existingOrderId.Value }, ct);
 
-                        // Returning 200 is acceptable for idempotent replay
+                        // acceptable for idempotent replay
                         return Ok(existing);
                     }
 
@@ -58,8 +58,7 @@ namespace OrdersApi.API.Controllers
             return CreatedAtAction(nameof(GetById), new { id = createdNoKey.Id }, createdNoKey);
         }
         /// <summary>
-        /// Placeholder for GetById (we will implement next).
-        /// Needed for CreatedAtAction.
+        /// Get order Details by Id.
         /// </summary>
         [HttpGet("{id:guid}")]
         public async Task<ActionResult<OrderDetailsDto>> GetById(Guid id, CancellationToken ct)
@@ -68,6 +67,9 @@ namespace OrdersApi.API.Controllers
             return Ok(order);
         }
 
+        /// <summary>
+        /// Update order status.
+        /// </summary>
         [HttpPut("{id:guid}/status")]
         public async Task<ActionResult<OrderStatusUpdatedDto>> UpdateStatus(Guid id, [FromBody] UpdateStatusRequest body, CancellationToken ct)
         {
@@ -80,6 +82,9 @@ namespace OrdersApi.API.Controllers
             return Ok(result);
         }
 
+        /// <summary>
+        /// Delete an order by Id.
+        /// </summary>
         [HttpDelete("{id:guid}")]
         public async Task<IActionResult> Delete(Guid id, CancellationToken ct)
         {
@@ -87,6 +92,9 @@ namespace OrdersApi.API.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Get a paginated list of orders with optional filtering and sorting.
+        /// </summary>
         [HttpGet]
         public async Task<ActionResult<PagedResult<OrderListItemDto>>> List(
         [FromQuery] string? status,
@@ -114,7 +122,6 @@ namespace OrdersApi.API.Controllers
 
             return Ok(result);
         }
-
         public class UpdateStatusRequest
         {
             public string Status { get; set; } = string.Empty;

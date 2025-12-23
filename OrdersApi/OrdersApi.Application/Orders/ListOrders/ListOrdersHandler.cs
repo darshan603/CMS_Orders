@@ -4,11 +4,6 @@ using OrdersApi.Application.Common.Dtos;
 using OrdersApi.Application.Common.Models;
 using OrdersApi.Application.Interfaces;
 using OrdersApi.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OrdersApi.Application.Orders.ListOrders
 {

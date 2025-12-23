@@ -2,11 +2,6 @@
 using OrdersApi.Domain.Entities;
 using OrdersApi.Domain.Enums;
 using OrdersApi.Domain.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OrdersApi.Tests.DomainTests
 {

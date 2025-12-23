@@ -3,11 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using OrdersApi.Application.Common.Dtos;
 using OrdersApi.Application.Common.Exceptions;
 using OrdersApi.Application.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OrdersApi.Application.Orders.GetOrderById
 {

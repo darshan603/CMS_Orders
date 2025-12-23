@@ -1,11 +1,6 @@
 ﻿using MediatR;
 using OrdersApi.Application.Common.Dtos;
 using OrdersApi.Application.Common.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OrdersApi.Application.Orders.ListOrders
 {

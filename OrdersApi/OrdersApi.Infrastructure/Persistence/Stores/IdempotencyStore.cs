@@ -1,11 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OrdersApi.Application.Interfaces;
 using OrdersApi.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OrdersApi.Infrastructure.Persistence.Stores
 {
